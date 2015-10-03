@@ -5,6 +5,62 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="responsive.css">
 
+  <style>
+  		.link {
+			outline: none;
+			text-decoration: none;
+			position:relative;
+			font-size: 16pt;
+			line-height: 1;
+			color: #9e9ba4;
+			display: inline-block;
+		}
+
+		.link--kukuri {
+			font-weight: 900;
+			overflow: hidden;
+			line-height: 1;
+			color: #b2b0a9;
+		}
+
+		.link--kukuri:hover {
+			color: #b2b0a9;
+		}
+
+		.link--kukuri::after {
+			content: '';
+			position: absolute;gi
+			height: 16px;
+			width: 100%;
+			top: 50%;
+			margin-top: -8px;
+			right: 0;
+			background: #F9F9F9;
+			transform: translate3d(-100%,0,0);
+			transition: transform 0.4s;
+			transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+		}
+
+		.link--kukuri:hover::after {
+			transform: translate3d(100%,0,0);
+		}
+
+		.link--kukuri::before {
+			content: attr(data-letters);
+			position: absolute;
+			z-index: 2;
+			overflow: hidden;
+			color: #424242;
+			white-space: nowrap;
+			width: 0%;
+			transition: width 0.4s 0.3s;
+		}
+
+		.link--kukuri:hover::before {
+			width: 100%;
+		}
+  </style>
+
 </head>
 
 <body>
@@ -20,7 +76,7 @@
 				  <span itemprop="addressCountry">Canada</span>
 				</small>
 				<small><span itemprop="email">mattandkevin1060@gmail.com &amp; h1354577@hku.hk</span></small>
-				<small><a href="https://tw.linkedin.com/pub/kai-chun-kevin-hsu/b4/8bb/542" itemprop="url">My LinkedIn</a></small>
+				<small><a class="link link--kukuri" data-letters="My LinkedIn" href="https://tw.linkedin.com/pub/kai-chun-kevin-hsu/b4/8bb/542" itemprop="url">My LinkedIn</a></small>
 			</div>
 			
 			<div id="photo">
