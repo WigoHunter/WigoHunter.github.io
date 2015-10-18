@@ -24,6 +24,10 @@ img { border: 0; max-width: 100%; }
 	color: red;
 }
 
+#myname {
+	text-decoration: underline;
+}
+
 .NY {
 	color: gold;
 }
@@ -49,6 +53,11 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 background-color: #fff;
 border: 1px solid #ccc;
 padding: 5px; 
+}
+
+#profilePic {
+	position: absolute;
+	right: 23%;
 }
 
 /** @group skills **/
